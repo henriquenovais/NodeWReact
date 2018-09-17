@@ -1,0 +1,14 @@
+{
+  "name": "first_server",
+  "version": "1.0.0",
+  "description": "First javascript server made with NodeJs",
+  "main": "create_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Henrique Oliveira",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

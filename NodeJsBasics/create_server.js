@@ -22,3 +22,15 @@ console.log("Now, the server is listening to the port 3000 boya! CAN'T YOU HEAR 
  //The server will be using the logic port 3000
 //In order to listen to this port just connect into:
 // http://localhost:3000
+
+/*
+This is the very basic usage of NodeJs.
+Thankfully, NodeJs is an open source javascript run-time enviroment which makes possible the creation of new tools
+that provide an even easier time with it.
+There are four main tools which will be used in the next codes in order to accelerate the development 
+of web applications:
+Express -> A web framework that uses NodeJs.
+NPM -> A NodeJs package manager 
+Nodemon -> ??
+EJS -> ??
+*/
