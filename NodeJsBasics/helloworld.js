@@ -1,4 +1,5 @@
-const http = require('http');
+const http = require('http');  //require is a javascript function that allows the programmer to import a library or other pages.
+//In essence, this library is used to add some functionc to our server.
 
 const hostname = "127.0.0.1";
 const port = 3000;
