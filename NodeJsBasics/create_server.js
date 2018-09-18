@@ -32,5 +32,5 @@ of web applications:
 Express -> A web framework that uses NodeJs.
 NPM -> A NodeJs package manager 
 Nodemon -> ??
-EJS -> ??
+EJS -> It is a template engine that allows the programmer to use javascript to create an interface
 */
