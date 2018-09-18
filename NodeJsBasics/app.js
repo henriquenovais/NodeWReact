@@ -4,14 +4,33 @@ var express = require('express'); //The express variable stores a function.
 var app = express(); //calling the function stored in the express variable.
 //var http = require('http'); is the equivallent of these declarations above in pure NodeJs
 
+app.set('view engine','ejs'); //Setting EJS as the default view engine of the project
+
+app.get('/news_form', function(req, res) {
+    res.render("admin/news_form.ejs"); 
+ });
+
+ app.get('/news', function(req, res) {
+    res.render("articles/politics.ejs"); 
+ });
+
+app.get('/', function(req, res) {
+    res.render("home/index.ejs"); 
+ });
+
+/* These codes are the result of using Express without EJS and such remain commented because they are 
+allegedly legacy implementations since Express + EJS should be better than just Express.
+
 app.get('/', function(req, res) {
    res.send("<html><body><p>HELLOW WORLD BOYZ</p></body></html>"); 
 });
 
 
-app.get('/politics', function(req, res) {
+ app.get('/politics', function(req, res) {
     res.send("<html><body><p> THIS IS NEWS ABOUT POLITICS! SHOUT!</p></body></html>"); 
  });
+
+ */
 
 app.listen(3000 , function(){
 
