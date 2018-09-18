@@ -31,6 +31,7 @@ There are four main tools which will be used in the next codes in order to accel
 of web applications:
 Express -> A web framework that uses NodeJs.
 NPM -> A NodeJs package manager 
-Nodemon -> ??
+Nodemon -> Is a tool from the NodeJs run-time environment that allows the programmer to change his or her 
+code without having to restart the server
 EJS -> It is a template engine that allows the programmer to use javascript to create an interface
 */
