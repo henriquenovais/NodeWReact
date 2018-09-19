@@ -10,4 +10,12 @@ var app = express(); //calling the function stored in the express variable.
 
 
 app.set("view engine", "ejs"); //Setting EJS as the default view engine of the project
+app.set("views","./app/views");//Letting express know the place in which the views are stored.
+
+/*This file will be executed by the arquive app.js and through its location.
+In other words:
+./../app/views = WRONG! Server.js will be executed through app.js!
+./app/views = Correct :D
+*/ 
+
 module.exports = app;
