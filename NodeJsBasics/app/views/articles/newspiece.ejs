@@ -8,7 +8,7 @@
     <style>
         h1 {
             font-family: 'Arial', sans-serif;
-            color: red;
+            color: pink;
             font-size: 10em;
             text-align: center;
             text-shadow: 5px 5px 5px #00CC00;
@@ -19,37 +19,23 @@
     </style>
 </head>
 <body>
-    <h1>IT'S ALL ABOUT A LOT OF NEWS</h1>
+    <h1>IT'S ALL ABOUT JUST ONE ARTICLE AT A TIME </h1>
 
     <table>
         <tr>
-            <th>Article ID</th>
             <th>Headline</th>
             <th>Article content</th>
             <th>Timestamp</th>
         </tr>
 
 
-        <% for(i = 0; i < newsvar.length ; i++){%>    
+        <%  %>    
         <tr>
-            <td><%= newsvar[i].id_article %></td>
-            <td><%= newsvar[i].title %></td>
-            <td><%= newsvar[i].content %></td>
-            <td><%= newsvar[i].pub_date %></td>
+            <td><%= piecevar[0].title %></td>
+            <td><%= piecevar[0].content %></td>
+            <td><%= piecevar[0].pub_date %></td>
         </tr>
 
-        <% } %>
-    <!-- To insert javascript code use <% %>
-     -->
-
-    <% for(i = 0; i < 3; i++){%>
-        <tr>
-            <td>5</td>
-            <td>Testando uso de javascript</td>
-            <td>Texto</td>
-            <td> asheu</td>
-        </tr>
-        <% } %>
 
     </table>
     

@@ -20,10 +20,13 @@ module.exports = function(app) {
 
   app.get("/news", function(req, res) {
     var connection = app.config.dbConnection();
+    var articleSQL = app.app.models.articleSQL();
 
-    connection.query("select * from article", function(error, result) {
-      //res.send(result);
+    articleSQL.getNews(connection, function(error, result){
       res.render("articles/news.ejs", { newsvar: result });
-    });
+       //res.send(result);
+    }); 
+     
+
   });
 };
