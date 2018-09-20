@@ -10,5 +10,6 @@ module.exports = function(app) {
       res.render("articles/newspiece.ejs", { piecevar: result });
     //res.send(result);
     });
+    
   });
 };
