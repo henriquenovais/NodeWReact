@@ -34,4 +34,5 @@ NPM -> A NodeJs package manager
 Nodemon -> Is a tool from the NodeJs run-time environment that allows the programmer to change his or her 
 code without having to restart the server
 EJS -> It is a template engine that allows the programmer to use javascript to create an interface
+Consign -> Used for automatic script loading in general, scanning for documents with new routes and other kinds of new features
 */
