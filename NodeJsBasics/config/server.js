@@ -8,6 +8,8 @@ var express = require("express"); //The express variable stores a function.
 var app = express(); //calling the function stored in the express variable.
 //var http = require('http'); is the equivallent of these declarations above in pure NodeJs
 
+
+
 var consign = require("consign");
 
 
@@ -19,8 +21,12 @@ In other words:
 ./../app/views = WRONG! Server.js will be executed through app.js!
 ./app/views = Correct :D
 */ 
+var bodyparser = require('body-parser');
+app.use(bodyparser.urlencoded({extended: true})); 
+/* Body-parser is a middleware so its integration has 
+to be done before the inclusion of routes and models.*/
 
-consign().include('./app/routes').then('config/dbConnection.js').then('app/models').into(app);
+consign().include('/app/routes').then('config/dbConnection.js').then('app/models').into(app);
 
 
 module.exports = app;
