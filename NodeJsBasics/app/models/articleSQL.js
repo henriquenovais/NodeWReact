@@ -15,5 +15,10 @@ module.exports = function(){
     this.getNewsPiece = function(connection, callback){
         connection.query("select * from article where id_article = 2",callback);
     }
+
+    this.saveNewsPiece = function(newspiece, connection, callback){
+        connection.query("insert into article set ?", newspiece, callback);
+    }
+
     return this;
 }

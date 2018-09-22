@@ -1,6 +1,6 @@
 //var dbconnection = require("./../../config/dbConnection.js");
 
-module.exports = function(app) {
+module.exports = function(application) {
   /*
   app.get("/news", function(req, res) {
 
@@ -18,9 +18,9 @@ module.exports = function(app) {
   });
   */
 
-  app.get("/news", function(req, res) {
-    var connection = app.config.dbConnection();
-    var articleSQL = app.app.models.articleSQL();
+  application.get("/news", function(req, res) {
+    var connection = application.config.dbConnection();
+    var articleSQL = application.app.models.articleSQL();
 
     articleSQL.getNews(connection, function(error, result){
       res.render("articles/news.ejs", { newsvar: result });
