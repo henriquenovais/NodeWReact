@@ -9,12 +9,13 @@ module.exports = function(application) {
     //How to do this without body-parser?
 
     var connection = application.config.dbConnection();
-    var articleSQL = application.app.models.articleSQL();
+    var articleSQL = new application.app.models.ArticleDAO(connection);
+    
 
-    articleSQL.saveNewsPiece(newspiece, connection, function(error, result) {
+    articleSQL.saveNewsPiece(newspiece, function(error, result) {
       res.redirect("/news");
       //Very important to use the redirect method otherwise the server
-      //will be vulnerable to infinite MySQL injections. 
+      //will be vulnerable to infinite MySQL injections.
       //res.send();
     });
   });

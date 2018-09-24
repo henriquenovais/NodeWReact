@@ -20,13 +20,12 @@ module.exports = function(application) {
 
   application.get("/news", function(req, res) {
     var connection = application.config.dbConnection();
-    var articleSQL = application.app.models.articleSQL();
+    var articleSQL = new application.app.models.ArticleDAO(connection);
+    
 
-    articleSQL.getNews(connection, function(error, result){
+    articleSQL.getNews(function(error, result) {
       res.render("articles/news.ejs", { newsvar: result });
-       //res.send(result);
-    }); 
-     
-
+      //res.send(result);
+    });
   });
 };
