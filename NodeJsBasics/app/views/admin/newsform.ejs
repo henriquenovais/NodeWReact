@@ -19,10 +19,19 @@
     <h1>IT'S ALL ABOUT NEWS FORM</h1>
 
     <FORM action="/article/save" method="post">
-        <label> Article title</label>
+        <label> Article title: </label>
         <input type="text" id="title" name="title" placeholder="Insert article title here" >
         <br>
-        <label>Article content</label>
+        <label>Author: </label>
+        <input type="text" id="author" name="author" placeholder="Insert the author's name here">
+        <br>
+        <label>Abstract: </label>
+        <input type="text" id="abstract" name="abstract" placeholder="Write the abstract of your article here">
+        <br>
+        <label>Desired publishing date:</label>
+        <input type="date" id="pub_date" name="pub_date">
+        <br>
+        <label>Article content: </label>
         <textarea id="content" name="content" rows="5" cols="30"></textarea>
         <br>
         <input type="submit" value="Submit">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>NEWS WEBSITE - Politics</title>
+    <title>NEWS WEBSITE - NEWSWEBSITE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         h1 {
@@ -24,9 +24,12 @@
     <table>
         <tr>
             <th>Article ID</th>
-            <th>Headline</th>
+            <th>Author</th>    
+            <th>Headline</th>        
+            <th>Abstract</th>
             <th>Article content</th>
-            <th>Timestamp</th>
+            <th>Submission Date</th>
+            <th>Publishing Date</th>
         </tr>
 
 
@@ -34,22 +37,16 @@
         <tr>
             <td><%= newsvar[i].id_article %></td>
             <td><%= newsvar[i].title %></td>
+            <td><%= newsvar[i].author %></td>
+            <td><%= newsvar[i].abstract %></td>
             <td><%= newsvar[i].content %></td>
+            <td><%= newsvar[i].sent_date %></td>
             <td><%= newsvar[i].pub_date %></td>
         </tr>
 
         <% } %>
     <!-- To insert javascript code use <% %>
      -->
-
-    <% for(i = 0; i < 3; i++){%>
-        <tr>
-            <td>5</td>
-            <td>Testando uso de javascript</td>
-            <td>Texto</td>
-            <td> asheu</td>
-        </tr>
-        <% } %>
 
     </table>
     

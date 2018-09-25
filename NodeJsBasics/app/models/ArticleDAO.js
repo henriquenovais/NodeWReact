@@ -12,7 +12,6 @@ ArticleDAO.prototype.getNewsPiece = function(callback){
 
 ArticleDAO.prototype.saveNewsPiece = function(newspiece, callback){
     this._connection.query("insert into article set ?", newspiece, callback);
-
 }
 
 module.exports = function(){
