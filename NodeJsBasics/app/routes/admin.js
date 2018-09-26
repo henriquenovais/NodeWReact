@@ -7,11 +7,11 @@ module.exports = function(application) {
     var newspiece = req.body;
     //body is where all the data sent through post will be saved. VERY IMPORTANT PROPERTY!
     //How to do this without body-parser?
-    req.assert('title', 'The title obligatory').notEmpty();
-    req.assert('abstract', 'The has to be an abstract in your publication').notEmpty();
-    req.assert('author', 'The author is obligatory').notEmpty();
-    req.assert('pub_date', 'The publishing data is obligatory').notEmpty();
-    req.assert('content','There has to be some content in order to submit your article').notEmpty();
+    req.check('title', 'The title obligatory').notEmpty();
+    req.check('abstract', 'The has to be an abstract in your publication').notEmpty();
+    req.check('author', 'The author is obligatory').notEmpty().isLength({min: 5});
+    req.check('pub_date', 'The publishing data is obligatory').notEmpty();
+    req.check('content','There has to be some content in order to submit your article').notEmpty().isLength({min: 50});
 
     var errors = req.validationErrors();
 
