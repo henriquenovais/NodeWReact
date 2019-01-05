@@ -1,4 +1,6 @@
 # NodeWReact
+***IMPORTANT ALERT: I tried creating this repository for learning both React and Node but it ended up being too much material for just one repository. If you intend to learn React please look for my ReactFromScratch repository and my React101 repository. This repository is used by me as an archive of my past practices.*** 
+
 
 This is a repository dedicated to the study and the production of didatic material related to NodeJS and React.
 
